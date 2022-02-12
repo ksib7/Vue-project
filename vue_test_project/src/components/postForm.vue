@@ -27,7 +27,6 @@ export default {
   components: {
     myButton,
   },
-
   data() {
     return {
       post: {
