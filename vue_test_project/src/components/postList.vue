@@ -5,7 +5,7 @@
       <div class="post__wrap__text">
         <strong>Название:</strong>{{ post.title }}
       </div>
-      <my-button class="btn">Удалить</my-button>
+      <my-button class="btn" @click="$emit('remove', post)">Удалить</my-button>
       <div class="post__wrap__text">
         <strong>Описание:</strong>{{ post.body }}
       </div>
@@ -56,6 +56,7 @@ export default {
 
 .post__wrap__text {
   font-size: 22px;
+  width: 90%;
 }
 
 .post__wrap__text strong {

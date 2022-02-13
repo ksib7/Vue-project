@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="heading_h1">Создание постов</h1>
     <post-form @create="createPost"></post-form>
-    <post-list v-bind:posts="posts"></post-list>
+    <post-list v-bind:posts="posts" @remove="removePost"></post-list>
   </div>
 </template>
 
@@ -18,13 +18,7 @@ export default {
 
   data() {
     return {
-      posts: [
-        { id: 1, title: "Название 1", body: "Информация 1" },
-        { id: 2, title: "Название 2", body: "Информация 2" },
-        { id: 3, title: "Название 3", body: "Информация 3" },
-        { id: 4, title: "Название 4", body: "Информация 4" },
-        { id: 5, title: "Название 5", body: "Информация 5" },
-      ],
+      posts: [],
     };
   },
 
@@ -32,6 +26,23 @@ export default {
     createPost(post) {
       this.posts.push(post);
     },
+
+    removePost(post) {
+      this.posts = this.posts.filter((item) => item.id !== post.id);
+    },
+
+    async getUsers() {
+      let response = await fetch("https://jsonplaceholder.typicode.com/posts");
+      let result = await response.json();
+
+      result = result.splice(0, 15);
+
+      this.posts = result;
+    },
+  },
+
+  mounted() {
+    this.getUsers();
   },
 };
 </script>
