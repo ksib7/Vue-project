@@ -1,14 +1,21 @@
 <template>
   <div class="post">
-    <h2>Список постов</h2>
-    <div v-for="(post, id) in posts" v-bind:key="id" class="post__wrap">
-      <div class="post__wrap__text">
-        <strong>Название:</strong>{{ post.title }}
+    <div v-if="posts.length > 0">
+      <h2>Список постов</h2>
+      <div v-for="(post, id) in posts" v-bind:key="id" class="post__wrap">
+        <div class="post__wrap__text">
+          <strong>Название:</strong>{{ post.title }}
+        </div>
+        <my-button class="btn" @click="$emit('remove', post)"
+          >Удалить</my-button
+        >
+        <div class="post__wrap__text">
+          <strong>Описание:</strong>{{ post.body }}
+        </div>
       </div>
-      <my-button class="btn" @click="$emit('remove', post)">Удалить</my-button>
-      <div class="post__wrap__text">
-        <strong>Описание:</strong>{{ post.body }}
-      </div>
+    </div>
+    <div v-else>
+      <h2 class="post__clear">Список пуст</h2>
     </div>
   </div>
 </template>
@@ -66,5 +73,9 @@ export default {
 .btn {
   position: absolute;
   right: 10px;
+}
+
+.post__clear {
+  color: red;
 }
 </style>
