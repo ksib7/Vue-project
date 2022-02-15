@@ -6,6 +6,11 @@
         <div class="post__wrap__text">
           <strong>Название:</strong>{{ post.title }}
         </div>
+        <my-button
+          @click="$router.push(`/posts/${post.id}`)"
+          class="btn btn--position"
+          >Открыть</my-button
+        >
         <my-button class="btn" @click="$emit('remove', post)"
           >Удалить</my-button
         >
@@ -40,6 +45,7 @@ export default {
 .post {
   margin-top: 50px;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .post h2 {
@@ -63,7 +69,7 @@ export default {
 
 .post__wrap__text {
   font-size: 22px;
-  width: 90%;
+  width: 80%;
 }
 
 .post__wrap__text strong {
@@ -73,6 +79,10 @@ export default {
 .btn {
   position: absolute;
   right: 10px;
+}
+
+.btn--position {
+  right: 130px;
 }
 
 .post__clear {
