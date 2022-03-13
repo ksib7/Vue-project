@@ -94,4 +94,10 @@ export default {
   margin-top: 20px;
   text-align: center;
 }
+
+@media (max-width: 657px) {
+  .button {
+    text-align: center;
+  }
+}
 </style>

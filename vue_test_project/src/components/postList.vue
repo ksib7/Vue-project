@@ -88,4 +88,37 @@ export default {
 .post__clear {
   color: red;
 }
+
+@media (max-width: 1215px) {
+  .post__wrap__text {
+    width: 70%;
+  }
+}
+
+@media (max-width: 873px) {
+  .post__wrap__text {
+    width: 60%;
+  }
+}
+
+@media (max-width: 657px) {
+  .post__wrap__text {
+    width: 100%;
+  }
+
+  .post__wrap {
+    padding-bottom: 80px;
+  }
+
+  .btn--position {
+    bottom: 5px;
+    left: 5px;
+    max-width: 108px;
+  }
+
+  .btn--position2 {
+    right: 5px;
+    bottom: 5px;
+  }
+} ;
 </style>

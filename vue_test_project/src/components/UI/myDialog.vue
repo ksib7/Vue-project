@@ -36,7 +36,8 @@ export default {
 }
 
 .dialog__content {
-  min-width: 500px;
+  max-width: 500px;
+  width: 100%;
   min-height: 271px;
   background: white;
   margin: auto;
