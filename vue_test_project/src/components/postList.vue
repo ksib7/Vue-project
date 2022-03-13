@@ -11,7 +11,7 @@
           class="btn btn--position"
           >Открыть</my-button
         >
-        <my-button class="btn" @click="$emit('remove', post)"
+        <my-button class="btn btn--position2" @click="$emit('remove', post)"
           >Удалить</my-button
         >
         <div class="post__wrap__text">
@@ -65,6 +65,7 @@ export default {
   justify-content: center;
   padding-left: 10px;
   justify-content: space-around;
+  position: relative;
 }
 
 .post__wrap__text {
