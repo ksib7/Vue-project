@@ -31,6 +31,8 @@ export default {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 1;
 }

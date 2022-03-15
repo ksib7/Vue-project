@@ -60,10 +60,18 @@ export default {
   border: 2px solid teal;
   border-radius: 10px;
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding-left: 10px;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   position: relative;
 }

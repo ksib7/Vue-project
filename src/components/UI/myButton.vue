@@ -14,7 +14,6 @@ export default {};
 .btn {
   font-size: 18px;
   color: white;
-  background: none;
   border: none;
   background: teal;
   padding: 10px;
@@ -24,5 +23,10 @@ export default {};
 
 .btn:hover {
   opacity: 0.6;
+}
+
+.btn:active {
+  background: white;
+  color: black;
 }
 </style>
